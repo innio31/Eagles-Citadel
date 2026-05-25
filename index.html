@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eagles Citadel Nursery & Primary School | ...where every child is a genius</title>
+    <meta name="description" content="Eagles Citadel Nursery and Primary School — where every child is a genius. Qualitative, affordable education with proper care and discipline. Creche through Primary 5.">
+    <meta name="keywords" content="Eagles Citadel, nursery school, primary school, creche, playgroup, kindergarten, affordable education Nigeria">
+    <meta name="robots" content="index, follow">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Eagles Citadel Nursery & Primary School">
+    <meta property="og:description" content="...where every child is a genius. Qualitative and affordable education from Creche to Primary 5.">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "School",
+      "name": "Eagles Citadel Nursery and Primary School",
+      "description": "Where every child is a genius. Qualitative and affordable education from Creche to Primary 5.",
+      "foundingDate": "2023",
+      "telephone": ["+2347067875337", "+2349067481700"],
+      "email": "eacteam2023@gmail.com"
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --indigo: #2B3896;
+            --indigo-dark: #1E2A78;
+            --indigo-deep: #131B5E;
+            --indigo-light: #3D4DB5;
+            --green: #27A244;
+            --green-dark: #1D8035;
+            --green-light: #E8F7ED;
+            --white: #ffffff;
+            --off-white: #F6F7FC;
+            --light-gray: #ECEEF8;
+            --text: #121930;
+            --text-muted: #5B6180;
+            --border: #DDE0F0;
+            --shadow-sm: 0 2px 8px rgba(43,56,150,0.08);
+            --shadow-md: 0 8px 32px rgba(43,56,150,0.14);
+            --shadow-lg: 0 20px 60px rgba(43,56,150,0.2);
+            --transition: all 0.3s cubic-bezier(0.4,0,0.2,1);
+            --radius: 14px;
+        }
+
+        *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            color: var(--text);
+            background: var(--white);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* TOPBAR */
+        .topbar {
+            background: var(--indigo-deep);
+            color: rgba(255,255,255,0.75);
+            font-size: 0.78rem;
+            padding: 0.5rem 0;
+        }
+        .topbar-inner {
+            max-width: 1200px; margin: 0 auto; padding: 0 1.5rem;
+            display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap;
+        }
+        .topbar a { color: rgba(255,255,255,0.75); text-decoration: none; }
+        .topbar a:hover { color: #7EE89A; }
+        .topbar-left, .topbar-right { display: flex; align-items: center; gap: 1.25rem; flex-wrap: wrap; }
+        .topbar i { color: #7EE89A; margin-right: 0.3rem; font-size: 0.72rem; }
+
+        /* HEADER */
+        .header {
+            background: var(--white);
+            box-shadow: var(--shadow-sm);
+            position: sticky; top: 0; z-index: 1000;
+            transition: var(--transition);
+        }
+        .header.scrolled { box-shadow: var(--shadow-md); }
+        .nav-wrapper {
+            max-width: 1200px; margin: 0 auto; padding: 0 1.5rem;
+            display: flex; justify-content: space-between; align-items: center; height: 72px;
+        }
+        .logo { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; }
+        .logo img { height: 54px; width: 54px; object-fit: contain; border-radius: 50%; }
+        .logo-text { display: flex; flex-direction: column; line-height: 1.1; }
+        .logo-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.15rem; font-weight: 700; color: var(--indigo);
+        }
+        .logo-motto {
+            font-size: 0.6rem; font-weight: 600; color: var(--green);
+            text-transform: uppercase; letter-spacing: 0.04em;
+        }
+        .nav { display: flex; align-items: center; gap: 0.2rem; }
+        .nav-link {
+            font-size: 0.88rem; font-weight: 500; color: var(--text);
+            text-decoration: none; padding: 0.5rem 0.85rem;
+            border-radius: 7px; transition: var(--transition);
+        }
+        .nav-link:hover { color: var(--indigo); background: var(--light-gray); }
+        .nav-link.active { color: var(--indigo); font-weight: 600; }
+        .nav-apply {
+            background: var(--green); color: var(--white) !important;
+            padding: 0.5rem 1.2rem; border-radius: 7px; margin-left: 0.5rem; font-weight: 600;
+        }
+        .nav-apply:hover { background: var(--green-dark) !important; }
+        .hamburger {
+            display: none; flex-direction: column; gap: 5px;
+            background: none; border: none; cursor: pointer; padding: 0.5rem;
+        }
+        .hamburger span { display: block; width: 24px; height: 2px; background: var(--indigo); border-radius: 2px; transition: var(--transition); }
+        .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+        .hamburger.open span:nth-child(2) { opacity: 0; }
+        .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+        /* HERO */
+        .hero {
+            position: relative; height: 88vh; min-height: 560px; max-height: 820px;
+            display: flex; align-items: center; justify-content: center; overflow: hidden;
+        }
+        .hero-slides { position: absolute; inset: 0; z-index: 0; }
+        .hero-slide {
+            position: absolute; inset: 0;
+            background-size: cover; background-position: center;
+            opacity: 0; transition: opacity 1.3s ease;
+        }
+        .hero-slide.active { opacity: 1; }
+        .hero-slide::after {
+            content: ''; position: absolute; inset: 0;
+            background: linear-gradient(135deg, rgba(19,27,94,0.82) 0%, rgba(43,56,150,0.6) 55%, rgba(39,162,68,0.2) 100%);
+        }
+        .slide-1 { background-image: url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1400&q=80'); }
+        .slide-2 { background-image: url('https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=1400&q=80'); }
+        .slide-3 { background-image: url('https://images.unsplash.com/photo-1529390079861-591de354faf5?w=1400&q=80'); }
+        .hero-content {
+            position: relative; z-index: 1; text-align: center; color: var(--white);
+            max-width: 840px; padding: 2rem 1.5rem;
+            animation: heroFadeUp 1s ease 0.3s both;
+        }
+        @keyframes heroFadeUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .hero-badge {
+            display: inline-flex; align-items: center; gap: 0.5rem;
+            background: rgba(39,162,68,0.18); border: 1px solid rgba(39,162,68,0.45);
+            color: #A8F0BB; font-size: 0.78rem; font-weight: 600;
+            letter-spacing: 0.1em; text-transform: uppercase;
+            padding: 0.4rem 1.1rem; border-radius: 100px; margin-bottom: 1.25rem;
+        }
+        .hero-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2.4rem, 6vw, 4.2rem);
+            font-weight: 800; line-height: 1.08; margin-bottom: 1rem;
+            text-shadow: 0 2px 20px rgba(0,0,0,0.3);
+        }
+        .hero-title span { color: #A8F0BB; }
+        .hero-subtitle {
+            font-size: clamp(1rem, 2.5vw, 1.2rem);
+            font-weight: 300; opacity: 0.9; margin-bottom: 2.25rem;
+            max-width: 580px; margin-left: auto; margin-right: auto;
+            font-style: italic;
+        }
+        .hero-cta { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+        .btn {
+            display: inline-flex; align-items: center; gap: 0.5rem;
+            padding: 0.85rem 1.8rem; border-radius: 8px;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-weight: 600; font-size: 0.95rem;
+            text-decoration: none; transition: var(--transition);
+            cursor: pointer; border: 2px solid transparent;
+        }
+        .btn-green { background: var(--green); color: var(--white); }
+        .btn-green:hover { background: var(--green-dark); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(39,162,68,0.35); }
+        .btn-outline-white { background: transparent; color: var(--white); border-color: rgba(255,255,255,0.6); }
+        .btn-outline-white:hover { background: rgba(255,255,255,0.12); border-color: var(--white); }
+        .btn-indigo { background: var(--indigo); color: var(--white); }
+        .btn-indigo:hover { background: var(--indigo-dark); transform: translateY(-2px); box-shadow: var(--shadow-md); }
+        .btn-outline-indigo { background: transparent; color: var(--indigo); border-color: var(--indigo); }
+        .btn-outline-indigo:hover { background: var(--indigo); color: var(--white); }
+        .hero-indicators {
+            position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%);
+            display: flex; gap: 0.5rem; z-index: 2;
+        }
+        .indicator {
+            width: 8px; height: 8px; border-radius: 50%;
+            background: rgba(255,255,255,0.4); border: none; cursor: pointer; transition: var(--transition);
+        }
+        .indicator.active { background: #7EE89A; width: 24px; border-radius: 4px; }
+
+        /* STATS STRIP */
+        .stats-strip { background: var(--indigo); padding: 1.75rem 0; }
+        .stats-inner {
+            max-width: 1200px; margin: 0 auto; padding: 0 1.5rem;
+            display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem;
+        }
+        .stat-item {
+            text-align: center; color: var(--white); padding: 0.5rem;
+            border-right: 1px solid rgba(255,255,255,0.12);
+        }
+        .stat-item:last-child { border-right: none; }
+        .stat-number { font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; font-weight: 700; color: #7EE89A; display: block; }
+        .stat-label { font-size: 0.82rem; opacity: 0.75; }
+
+        /* SECTIONS */
+        .section { padding: 5rem 0; }
+        .section-alt { background: var(--off-white); }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+        .section-label {
+            display: inline-flex; align-items: center; gap: 0.5rem;
+            font-size: 0.73rem; font-weight: 700; letter-spacing: 0.14em;
+            text-transform: uppercase; color: var(--green); margin-bottom: 0.75rem;
+        }
+        .section-label::before { content: ''; display: block; width: 20px; height: 2px; background: var(--green); }
+        .section-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(1.9rem, 4vw, 2.9rem);
+            font-weight: 700; color: var(--indigo);
+            line-height: 1.12; margin-bottom: 1rem;
+        }
+        .section-subtitle { font-size: 1.05rem; color: var(--text-muted); max-width: 580px; margin-bottom: 3rem; }
+
+        /* FEATURES */
+        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; }
+        .feature-card {
+            background: var(--white); border: 1px solid var(--border);
+            border-radius: var(--radius); padding: 2rem 1.75rem;
+            transition: var(--transition); position: relative; overflow: hidden;
+        }
+        .feature-card::before {
+            content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+            background: linear-gradient(90deg, var(--indigo), var(--green));
+            transform: scaleX(0); transition: var(--transition);
+        }
+        .feature-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+        .feature-card:hover::before { transform: scaleX(1); }
+        .feature-icon {
+            width: 56px; height: 56px; border-radius: 14px;
+            background: var(--light-gray); display: flex; align-items: center;
+            justify-content: center; font-size: 1.5rem; margin-bottom: 1.25rem;
+            color: var(--indigo); transition: var(--transition);
+        }
+        .feature-card:hover .feature-icon { background: var(--indigo); color: var(--white); }
+        .feature-title { font-family: 'Cormorant Garamond', serif; font-size: 1.25rem; font-weight: 700; color: var(--indigo); margin-bottom: 0.5rem; }
+        .feature-text { font-size: 0.9rem; color: var(--text-muted); line-height: 1.65; }
+
+        /* PROGRAMS */
+        .programs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.25rem; }
+        .program-card {
+            border-radius: var(--radius); overflow: hidden;
+            transition: var(--transition); cursor: default;
+        }
+        .program-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+        .program-card-inner { padding: 1.75rem 1.5rem; color: var(--white); }
+        .program-age {
+            font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em;
+            text-transform: uppercase; opacity: 0.75; margin-bottom: 0.5rem;
+        }
+        .program-name { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 700; margin-bottom: 0.35rem; }
+        .program-desc { font-size: 0.85rem; opacity: 0.8; line-height: 1.5; }
+
+        /* TWO COL */
+        .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+        .two-col-img { border-radius: var(--radius); overflow: hidden; }
+        .two-col-img img { width: 100%; height: 420px; object-fit: cover; display: block; }
+
+        /* MISSION/VISION */
+        .mv-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+        .mv-card {
+            background: var(--white); border-radius: var(--radius);
+            padding: 2.25rem 2rem; border: 1px solid var(--border);
+            transition: var(--transition);
+        }
+        .mv-card:hover { box-shadow: var(--shadow-md); }
+        .mv-icon { font-size: 2rem; margin-bottom: 1rem; }
+        .mv-title { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 700; color: var(--indigo); margin-bottom: 0.75rem; }
+        .mv-text { font-size: 0.9rem; color: var(--text-muted); line-height: 1.7; }
+        .mv-list { list-style: none; padding: 0; }
+        .mv-list li {
+            display: flex; align-items: flex-start; gap: 0.6rem;
+            font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 0.5rem;
+        }
+        .mv-list li::before { content: '✦'; color: var(--green); font-size: 0.65rem; margin-top: 0.35rem; flex-shrink: 0; }
+
+        /* EXTRACURRICULAR */
+        .extra-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; }
+        .extra-card {
+            background: var(--indigo); color: var(--white);
+            border-radius: var(--radius); padding: 2rem 1.75rem;
+            transition: var(--transition); position: relative; overflow: hidden;
+        }
+        .extra-card::after {
+            content: ''; position: absolute; bottom: -30px; right: -30px;
+            width: 100px; height: 100px; border-radius: 50%;
+            background: rgba(255,255,255,0.06);
+        }
+        .extra-card:hover { background: var(--indigo-dark); transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+        .extra-icon { font-size: 2.2rem; margin-bottom: 1rem; }
+        .extra-title { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 700; margin-bottom: 0.5rem; }
+        .extra-text { font-size: 0.88rem; opacity: 0.78; line-height: 1.6; }
+
+        /* GALLERY */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            grid-template-rows: 220px 220px;
+            gap: 0.75rem; border-radius: var(--radius); overflow: hidden;
+        }
+        .gallery-item { position: relative; overflow: hidden; }
+        .gallery-item:first-child { grid-row: span 2; }
+        .gallery-item img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s ease; }
+        .gallery-item:hover img { transform: scale(1.05); }
+        .gallery-caption {
+            position: absolute; bottom: 0; left: 0; right: 0;
+            background: linear-gradient(transparent, rgba(19,27,94,0.7));
+            color: var(--white); font-size: 0.78rem; padding: 1rem 0.75rem 0.6rem;
+            opacity: 0; transition: var(--transition);
+        }
+        .gallery-item:hover .gallery-caption { opacity: 1; }
+
+        /* CTA BANNER */
+        .cta-banner {
+            background: linear-gradient(135deg, var(--indigo-deep) 0%, var(--indigo) 50%, var(--green-dark) 100%);
+            padding: 4rem 0; text-align: center; color: var(--white);
+        }
+        .cta-banner h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.8rem, 4vw, 2.6rem); font-weight: 700; margin-bottom: 0.75rem; }
+        .cta-banner p { font-size: 1.05rem; opacity: 0.85; margin-bottom: 2rem; max-width: 520px; margin-left: auto; margin-right: auto; }
+
+        /* CONTACT SECTION */
+        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
+        .contact-info h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; color: var(--indigo); margin-bottom: 1.5rem; }
+        .contact-item { display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1.25rem; }
+        .contact-icon { width: 44px; height: 44px; border-radius: 10px; background: var(--light-gray); display: flex; align-items: center; justify-content: center; color: var(--indigo); flex-shrink: 0; }
+        .contact-detail strong { display: block; font-size: 0.82rem; color: var(--text-muted); font-weight: 500; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.2rem; }
+        .contact-detail a, .contact-detail span { font-size: 0.95rem; color: var(--text); text-decoration: none; display: block; }
+        .contact-detail a:hover { color: var(--indigo); }
+        .social-row { display: flex; gap: 0.75rem; margin-top: 1.5rem; }
+        .social-btn {
+            width: 40px; height: 40px; border-radius: 10px;
+            background: var(--indigo); color: var(--white);
+            display: flex; align-items: center; justify-content: center;
+            text-decoration: none; font-size: 1rem; transition: var(--transition);
+        }
+        .social-btn:hover { background: var(--green); transform: translateY(-2px); }
+        .social-btn.fb { background: #1877F2; }
+        .social-btn.ig { background: linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888); }
+
+        /* FOOTER */
+        .footer { background: var(--indigo-deep); color: rgba(255,255,255,0.7); padding: 4rem 0 0; }
+        .footer-grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1.2fr; gap: 2.5rem; padding-bottom: 3rem; }
+        .footer-logo { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem; }
+        .footer-logo img { height: 50px; width: 50px; object-fit: contain; border-radius: 50%; }
+        .footer-logo-name { font-family: 'Cormorant Garamond', serif; font-size: 1rem; font-weight: 700; color: var(--white); line-height: 1.2; }
+        .footer-motto { font-size: 0.62rem; color: #7EE89A; letter-spacing: 0.04em; }
+        .footer-desc { font-size: 0.88rem; line-height: 1.65; margin-bottom: 1.5rem; max-width: 280px; }
+        .footer-social { display: flex; gap: 0.6rem; }
+        .footer-social-link {
+            width: 36px; height: 36px; border-radius: 8px;
+            background: rgba(255,255,255,0.08); color: rgba(255,255,255,0.7);
+            display: flex; align-items: center; justify-content: center;
+            text-decoration: none; font-size: 0.9rem; transition: var(--transition);
+        }
+        .footer-social-link:hover { background: var(--green); color: var(--white); }
+        .footer-heading { font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; font-weight: 700; color: var(--white); margin-bottom: 1.25rem; }
+        .footer-links { list-style: none; }
+        .footer-links li { margin-bottom: 0.6rem; }
+        .footer-links a { color: rgba(255,255,255,0.65); text-decoration: none; font-size: 0.88rem; transition: var(--transition); }
+        .footer-links a:hover { color: #7EE89A; }
+        .footer-contact li { display: flex; gap: 0.6rem; font-size: 0.85rem; margin-bottom: 0.65rem; align-items: flex-start; }
+        .footer-contact i { color: #7EE89A; margin-top: 0.2rem; }
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.08);
+            padding: 1.25rem 0; display: flex;
+            justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;
+            font-size: 0.8rem;
+        }
+        .footer-bottom a { color: #7EE89A; text-decoration: none; }
+
+        /* REVEAL ANIMATION */
+        .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+
+        /* MOBILE NAV */
+        @media (max-width: 768px) {
+            .hamburger { display: flex; }
+            .nav {
+                display: none; position: absolute; top: 72px; left: 0; right: 0;
+                background: var(--white); flex-direction: column; padding: 1rem 1.5rem 1.5rem;
+                box-shadow: var(--shadow-md); border-top: 1px solid var(--border); gap: 0.25rem;
+            }
+            .nav.open { display: flex; }
+            .nav-link { padding: 0.6rem 0.5rem; }
+            .nav-apply { margin-left: 0; text-align: center; }
+            .stats-inner { grid-template-columns: repeat(2, 1fr); }
+            .features-grid { grid-template-columns: 1fr; }
+            .two-col { grid-template-columns: 1fr; gap: 2rem; }
+            .two-col-img img { height: 260px; }
+            .mv-grid { grid-template-columns: 1fr; }
+            .gallery-grid { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
+            .gallery-item:first-child { grid-column: span 2; grid-row: span 1; }
+            .gallery-item:first-child .gallery-item img { height: 220px; }
+            .gallery-item { height: 160px; }
+            .contact-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+            .footer-bottom { flex-direction: column; text-align: center; }
+            .topbar-right { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- TOPBAR -->
+    <div class="topbar">
+        <div class="topbar-inner">
+            <div class="topbar-left">
+                <span><i class="fas fa-phone"></i><a href="tel:07067875337">07067875337</a></span>
+                <span><i class="fas fa-phone"></i><a href="tel:09067481700">09067481700</a></span>
+            </div>
+            <div class="topbar-right">
+                <span><i class="fas fa-envelope"></i><a href="mailto:eacteam2023@gmail.com">eacteam2023@gmail.com</a></span>
+                <span><i class="fas fa-calendar"></i>Admissions Open 2025/2026</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- HEADER -->
+    <header class="header" id="header">
+        <div class="nav-wrapper">
+            <a href="index.html" class="logo">
+                <img src="logo.jpeg" alt="Eagles Citadel Logo">
+                <div class="logo-text">
+                    <span class="logo-name">Eagles Citadel</span>
+                    <span class="logo-motto">...where every child is a genius</span>
+                </div>
+            </a>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+            <nav class="nav" id="nav">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="admissions.html" class="nav-link">Admissions</a>
+                <a href="admissions.html" class="nav-link nav-apply">Apply Now</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-slides">
+            <div class="hero-slide slide-1 active"></div>
+            <div class="hero-slide slide-2"></div>
+            <div class="hero-slide slide-3"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge"><i class="fas fa-star"></i> Est. 2023 &mdash; Nurturing Young Geniuses</div>
+            <h1 class="hero-title">
+                Where Every<br>Child is a <span>Genius</span>
+            </h1>
+            <p class="hero-subtitle">Eagles Citadel Nursery &amp; Primary School &mdash; bringing out the best potential in every child through qualitative, affordable education and loving care.</p>
+            <div class="hero-cta">
+                <a href="admissions.html" class="btn btn-green"><i class="fas fa-file-alt"></i> Apply for Admission</a>
+                <a href="about.html" class="btn btn-outline-white">Learn More About Us</a>
+            </div>
+        </div>
+        <div class="hero-indicators">
+            <button class="indicator active" data-slide="0"></button>
+            <button class="indicator" data-slide="1"></button>
+            <button class="indicator" data-slide="2"></button>
+        </div>
+    </section>
+
+    <!-- STATS STRIP -->
+    <div class="stats-strip">
+        <div class="stats-inner">
+            <div class="stat-item">
+                <span class="stat-number">2023</span>
+                <span class="stat-label">Year Founded</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">6</span>
+                <span class="stat-label">Class Levels</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">3</span>
+                <span class="stat-label">Extra-Curricular Programs</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">100%</span>
+                <span class="stat-label">Dedicated to Your Child</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- WHY CHOOSE US -->
+    <section class="section">
+        <div class="container">
+            <span class="section-label">Why Choose Us</span>
+            <h2 class="section-title">We Bring Out the Best<br>in Every Child</h2>
+            <p class="section-subtitle">Using different teaching methods suitable for each child, we ensure every pupil thrives and discovers their unique potential.</p>
+            <div class="features-grid reveal">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <h3 class="feature-title">Qualitative Education</h3>
+                    <p class="feature-text">Our curriculum is designed to build strong academic foundations while igniting curiosity and a love of learning in every child.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-coins"></i></div>
+                    <h3 class="feature-title">Affordable Education</h3>
+                    <p class="feature-text">We believe every child deserves access to excellent education. Our fees are structured to be accessible without compromising on quality.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-heart"></i></div>
+                    <h3 class="feature-title">Proper Care</h3>
+                    <p class="feature-text">From our Creche to Primary 5, our staff provide a warm, nurturing environment where every child feels safe, loved and valued.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3 class="feature-title">Discipline &amp; Prayer</h3>
+                    <p class="feature-text">We build character through consistent discipline and a godly foundation, shaping children who are confident and God-fearing.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROGRAMS -->
+    <section class="section section-alt">
+        <div class="container">
+            <span class="section-label">Our Programmes</span>
+            <h2 class="section-title">From Creche to Primary &mdash;<br>A Journey of Discovery</h2>
+            <p class="section-subtitle">We cater to children from 6 months all the way to 10 years, with age-appropriate teaching at every stage.</p>
+            <div class="programs-grid reveal">
+                <div class="program-card">
+                    <div class="program-card-inner" style="background: linear-gradient(135deg, #1E2A78, #2B3896);">
+                        <div class="program-age">6 months – 1 year</div>
+                        <div class="program-name">Crèche</div>
+                        <div class="program-desc">Safe, loving care for our tiniest learners in a nurturing home-like environment.</div>
+                    </div>
+                </div>
+                <div class="program-card">
+                    <div class="program-card-inner" style="background: linear-gradient(135deg, #27A244, #1D8035);">
+                        <div class="program-age">1 – 2 years</div>
+                        <div class="program-name">Playgroup</div>
+                        <div class="program-desc">Guided play and early sensory development for toddlers discovering the world.</div>
+                    </div>
+                </div>
+                <div class="program-card">
+                    <div class="program-card-inner" style="background: linear-gradient(135deg, #3D4DB5, #2B3896);">
+                        <div class="program-age">2 – 3 years</div>
+                        <div class="program-name">Kindergarten</div>
+                        <div class="program-desc">Structured activities that introduce early literacy, numeracy and social skills.</div>
+                    </div>
+                </div>
+                <div class="program-card">
+                    <div class="program-card-inner" style="background: linear-gradient(135deg, #1D8035, #27A244);">
+                        <div class="program-age">3 – 5 years</div>
+                        <div class="program-name">Nursery 1 &amp; 2</div>
+                        <div class="program-desc">Building confidence, communication and foundational academic skills through play-based learning.</div>
+                    </div>
+                </div>
+                <div class="program-card">
+                    <div class="program-card-inner" style="background: linear-gradient(135deg, #131B5E, #2B3896);">
+                        <div class="program-age">5 – 10 years</div>
+                        <div class="program-name">Primary 1 – 5</div>
+                        <div class="program-desc">A rigorous yet engaging curriculum preparing pupils for academic excellence and character growth.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT STRIP -->
+    <section class="section">
+        <div class="container">
+            <div class="two-col">
+                <div>
+                    <span class="section-label">Our Approach</span>
+                    <h2 class="section-title">Different Methods for Every Child's Learning Style</h2>
+                    <p style="color:var(--text-muted); line-height:1.8; margin-bottom:1.5rem;">At Eagles Citadel, we understand that no two children learn the same way. Our dedicated teachers study each pupil and adapt their methods to unlock every child's inner genius — because we believe every child has something extraordinary within them.</p>
+                    <ul style="list-style:none; padding:0; margin-bottom:2rem;">
+                        <li style="display:flex; gap:0.75rem; align-items:flex-start; margin-bottom:0.75rem;">
+                            <span style="background:var(--green-light); color:var(--green); width:28px; height:28px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:0.75rem; flex-shrink:0; margin-top:0.1rem;"><i class="fas fa-check"></i></span>
+                            <span style="color:var(--text-muted); font-size:0.95rem;">Child-centred, adaptive teaching methods</span>
+                        </li>
+                        <li style="display:flex; gap:0.75rem; align-items:flex-start; margin-bottom:0.75rem;">
+                            <span style="background:var(--green-light); color:var(--green); width:28px; height:28px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:0.75rem; flex-shrink:0; margin-top:0.1rem;"><i class="fas fa-check"></i></span>
+                            <span style="color:var(--text-muted); font-size:0.95rem;">Qualified, caring and prayerful educators</span>
+                        </li>
+                        <li style="display:flex; gap:0.75rem; align-items:flex-start; margin-bottom:0.75rem;">
+                            <span style="background:var(--green-light); color:var(--green); width:28px; height:28px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:0.75rem; flex-shrink:0; margin-top:0.1rem;"><i class="fas fa-check"></i></span>
+                            <span style="color:var(--text-muted); font-size:0.95rem;">Safe, secure and stimulating school environment</span>
+                        </li>
+                        <li style="display:flex; gap:0.75rem; align-items:flex-start; margin-bottom:0.75rem;">
+                            <span style="background:var(--green-light); color:var(--green); width:28px; height:28px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:0.75rem; flex-shrink:0; margin-top:0.1rem;"><i class="fas fa-check"></i></span>
+                            <span style="color:var(--text-muted); font-size:0.95rem;">Regular parent-teacher communication and feedback</span>
+                        </li>
+                    </ul>
+                    <a href="about.html" class="btn btn-indigo"><i class="fas fa-info-circle"></i> More About Us</a>
+                </div>
+                <div class="two-col-img">
+                    <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&q=80" alt="Children learning at Eagles Citadel">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXTRACURRICULAR -->
+    <section class="section section-alt">
+        <div class="container">
+            <span class="section-label">Beyond the Classroom</span>
+            <h2 class="section-title">Extracurricular Programmes</h2>
+            <p class="section-subtitle">We nurture talents and passions beyond academics — shaping well-rounded, gifted children.</p>
+            <div class="extra-grid reveal">
+                <div class="extra-card">
+                    <div class="extra-icon">🎵</div>
+                    <h3 class="extra-title">Music &amp; Instrument Training</h3>
+                    <p class="extra-text">Professional music instruction covering vocals and instruments, helping children discover their musical gifts from an early age.</p>
+                </div>
+                <div class="extra-card" style="background: var(--green-dark);">
+                    <div class="extra-icon">⚽</div>
+                    <h3 class="extra-title">Football Training</h3>
+                    <p class="extra-text">Structured football coaching that builds teamwork, discipline, fitness and confidence on and off the field.</p>
+                </div>
+                <div class="extra-card" style="background: var(--indigo-light);">
+                    <div class="extra-icon">🎨</div>
+                    <h3 class="extra-title">Art World Practicals</h3>
+                    <p class="extra-text">Creative art sessions and trainings that develop imagination, fine motor skills and a lifelong love of creative expression.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="section">
+        <div class="container">
+            <span class="section-label">Life at Eagles Citadel</span>
+            <h2 class="section-title">A Vibrant School Community</h2>
+            <p class="section-subtitle" style="margin-bottom:2rem;">Moments of learning, laughter and growth in our school community.</p>
+            <div class="gallery-grid reveal">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=800&q=80" alt="Classroom learning">
+                    <div class="gallery-caption">Active classroom learning</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1529390079861-591de354faf5?w=400&q=80" alt="Creative activities">
+                    <div class="gallery-caption">Creative activities</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=400&q=80" alt="Story time">
+                    <div class="gallery-caption">Story time</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1544717297-fa95b6ee9643?w=400&q=80" alt="Art and crafts">
+                    <div class="gallery-caption">Art &amp; crafts</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1571260899304-425eee4c7efc?w=400&q=80" alt="Sports activities">
+                    <div class="gallery-caption">Sports day</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section section-alt" id="contact">
+        <div class="container">
+            <span class="section-label">Get In Touch</span>
+            <h2 class="section-title">We'd Love to Hear From You</h2>
+            <p class="section-subtitle">Reach out to us with questions about admissions, our programmes, or to schedule a visit.</p>
+            <div class="contact-grid reveal">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                        <div class="contact-detail">
+                            <strong>Phone</strong>
+                            <a href="tel:07067875337">07067875337</a>
+                            <a href="tel:09067481700">09067481700</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                        <div class="contact-detail">
+                            <strong>Email</strong>
+                            <a href="mailto:eacteam2023@gmail.com">eacteam2023@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-share-alt"></i></div>
+                        <div class="contact-detail">
+                            <strong>Social Media</strong>
+                            <span>Eagles Citadel (Facebook &amp; Instagram)</span>
+                        </div>
+                    </div>
+                    <div class="social-row">
+                        <a href="https://facebook.com/eaglescitadel" target="_blank" rel="noopener" class="social-btn fb" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://instagram.com/eaglescitadelschools" target="_blank" rel="noopener" class="social-btn ig" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/2347067875337" target="_blank" rel="noopener" class="social-btn" style="background:#25D366;" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <div style="background:var(--white); border-radius:var(--radius); padding:2rem; border:1px solid var(--border);">
+                        <h3 style="font-family:'Cormorant Garamond',serif; font-size:1.5rem; color:var(--indigo); margin-bottom:1.25rem;">Quick Enquiry</h3>
+                        <div style="display:flex; flex-direction:column; gap:1rem;">
+                            <input type="text" placeholder="Your Name" style="padding:0.75rem 1rem; border:1px solid var(--border); border-radius:8px; font-family:'Plus Jakarta Sans',sans-serif; font-size:0.9rem; outline:none; transition:border-color 0.2s;" onfocus="this.style.borderColor='var(--indigo)'" onblur="this.style.borderColor='var(--border)'">
+                            <input type="tel" placeholder="Phone Number" style="padding:0.75rem 1rem; border:1px solid var(--border); border-radius:8px; font-family:'Plus Jakarta Sans',sans-serif; font-size:0.9rem; outline:none; transition:border-color 0.2s;" onfocus="this.style.borderColor='var(--indigo)'" onblur="this.style.borderColor='var(--border)'">
+                            <select style="padding:0.75rem 1rem; border:1px solid var(--border); border-radius:8px; font-family:'Plus Jakarta Sans',sans-serif; font-size:0.9rem; outline:none; color:var(--text); transition:border-color 0.2s;" onfocus="this.style.borderColor='var(--indigo)'" onblur="this.style.borderColor='var(--border)'">
+                                <option value="">I'm enquiring about...</option>
+                                <option>Crèche (6 months – 1 year)</option>
+                                <option>Playgroup (1 – 2 years)</option>
+                                <option>Kindergarten (2 – 3 years)</option>
+                                <option>Nursery 1 or 2 (3 – 5 years)</option>
+                                <option>Primary 1–5 (5 – 10 years)</option>
+                                <option>General Enquiry</option>
+                            </select>
+                            <textarea placeholder="Your message or question" rows="4" style="padding:0.75rem 1rem; border:1px solid var(--border); border-radius:8px; font-family:'Plus Jakarta Sans',sans-serif; font-size:0.9rem; outline:none; resize:vertical; transition:border-color 0.2s;" onfocus="this.style.borderColor='var(--indigo)'" onblur="this.style.borderColor='var(--border)'"></textarea>
+                            <button class="btn btn-green" style="justify-content:center; border:none;" onclick="alert('Thank you! We will get back to you shortly.')"><i class="fas fa-paper-plane"></i> Send Enquiry</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <div class="cta-banner">
+        <div class="container">
+            <h2>Ready to Enrol Your Child?</h2>
+            <p>Admissions are open for all levels — from Crèche to Primary 5. Take the first step towards your child's brilliant future.</p>
+            <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+                <a href="admissions.html" class="btn" style="background:var(--white); color:var(--green); font-weight:700;"><i class="fas fa-file-alt"></i> Apply for Admission</a>
+                <a href="about.html" class="btn btn-outline-white">Learn More About Us</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-logo">
+                        <img src="logo.jpeg" alt="Eagles Citadel Logo">
+                        <div>
+                            <div class="footer-logo-name">Eagles Citadel</div>
+                            <div class="footer-motto">Nursery &amp; Primary School</div>
+                        </div>
+                    </div>
+                    <p class="footer-desc">Producing pupils who are energetic enough to discover the best of God in them through qualitative and affordable education, proper care, discipline and prayer.</p>
+                    <div class="footer-social">
+                        <a href="https://facebook.com/eaglescitadel" target="_blank" rel="noopener" class="footer-social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://instagram.com/eaglescitadelschools" target="_blank" rel="noopener" class="footer-social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/2347067875337" target="_blank" rel="noopener" class="footer-social-link" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="footer-heading">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="admissions.html">Admissions</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="footer-heading">Programmes</h3>
+                    <ul class="footer-links">
+                        <li><a href="admissions.html">Crèche &amp; Playgroup</a></li>
+                        <li><a href="admissions.html">Kindergarten</a></li>
+                        <li><a href="admissions.html">Nursery 1 &amp; 2</a></li>
+                        <li><a href="admissions.html">Primary 1 – 5</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="footer-heading">Contact Us</h3>
+                    <ul class="footer-links footer-contact">
+                        <li><i class="fas fa-phone"></i><a href="tel:07067875337" style="color:rgba(255,255,255,0.65);">07067875337</a></li>
+                        <li><i class="fas fa-phone"></i><a href="tel:09067481700" style="color:rgba(255,255,255,0.65);">09067481700</a></li>
+                        <li><i class="fas fa-envelope"></i><a href="mailto:eacteam2023@gmail.com" style="color:rgba(255,255,255,0.65);">eacteam2023@gmail.com</a></li>
+                        <li><i class="fab fa-facebook"></i><span>Eagles Citadel</span></li>
+                        <li><i class="fab fa-instagram"></i><span>Eagles Citadel Schools</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Eagles Citadel Nursery &amp; Primary School. All Rights Reserved.</p>
+                <p>Designed by <a href="https://impactdigitalacademy.com.ng" target="_blank" rel="noopener">Impact Digital Services</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Header scroll
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => header.classList.toggle('scrolled', window.scrollY > 40));
+
+        // Mobile nav
+        const hamburger = document.getElementById('hamburger');
+        const nav = document.getElementById('nav');
+        hamburger.addEventListener('click', () => { hamburger.classList.toggle('open'); nav.classList.toggle('open'); });
+        nav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => { hamburger.classList.remove('open'); nav.classList.remove('open'); }));
+
+        // Hero slider
+        const slides = document.querySelectorAll('.hero-slide');
+        const indicators = document.querySelectorAll('.indicator');
+        let current = 0;
+        function goToSlide(n) {
+            slides[current].classList.remove('active');
+            indicators[current].classList.remove('active');
+            current = n;
+            slides[current].classList.add('active');
+            indicators[current].classList.add('active');
+        }
+        indicators.forEach(btn => btn.addEventListener('click', () => goToSlide(+btn.dataset.slide)));
+        setInterval(() => goToSlide((current + 1) % slides.length), 5000);
+
+        // Scroll reveal
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
